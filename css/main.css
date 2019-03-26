@@ -1822,7 +1822,10 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a706d0;
+  background: #c7c7ed;
+}
+.links-of-author-item {
+  text-align: center;
 }
 .links-of-blogroll {
   font-size: 13px;
