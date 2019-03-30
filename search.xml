@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hexo博客优化]]></title>
+    <url>%2F2019%2F03%2F27%2FHexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[插入音乐🎵很多音乐网站因为版权原因无法生成外链，这里介绍的是自己生成的外链 第一步 安装hexo-tag-aplayer插件 切换到hexo的目录下，运行以下代码进行安装： 1npm install --save hexo-tag-aplayer 第二步 在markdown文档中需要添加音乐的地方添加以下代码 1npm install --save hexo-tag-aplayer（单首歌曲） 添加歌单的方法 1&#123;% aplayerlist %&#125;&#123;"narrow": false,"autoplay": true,"showlrc": 3,"mode": "random","music": [&#123;"title": "平凡之路","author": "朴树","url": "http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.mp3","pic": "https://ogd99kckh.qnssl.com/1.jpg","lrc": "http://og9ocpmwk.bkt.clouddn.com/%E5%B9%B3%E5%87%A1%E4%B9%8B%E8%B7%AF.txt"&#125;,&#123;"title": "野子","author": "苏运莹","url": "http://og9ocpmwk.bkt.clouddn.com/01%20%E9%87%8E%E5%AD%90.m4a","pic": "http://og9ocpmwk.bkt.clouddn.com/%E9%87%8E%E5%AD%90.jpg","lrc":"https://ogd99kckh.qnssl.com/%E9%87%8E%E5%AD%90.txt"&#125;]&#125;&#123;% endaplayerlist %&#125; markdown插入音乐一般做法 因为markdown兼容HTML语法，故可以在markdown文件中直接用HTML语法 1&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheightheight=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=420125990&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt; 插入视频第一步： 安装hexo-tag-dplayer 切换到hexo的目录下，运行以下代码进行安装： 1npm install hexo-tag-dplayer --save 第二步： 在markdown文档中需要添加视频的地方添加以下代码 1&#123;% dplayer "url=http://devtest.qiniudn.com/若能绽放光芒.mp4" "api=http://dplayer.daoapp.io" "pic=http://devtest.qiniudn.com/若能绽放光芒.png" "id=9E2E3368B56CDBB4" "loop=yes" "theme=#FADFA3" "autoplay=false" "token=tokendemo" %&#125; markdown插入视频一般做法 因为markdown兼容HTML语法，故可以在markdown文件中直接用HTML语法 1&lt;embed src="http://player.youku.com/player.php/Type/Folder/Fid/27690810/Ob/1/sid/XMTY1MTI3NjMyNA==/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"&gt;&lt;/embed&gt; 123&lt;video width="480" height="320" controls&gt;&lt;source src="movie.mp4"&gt;&lt;/video&gt;]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown的基本操作]]></title>
+    <url>%2F2019%2F03%2F27%2FMarkdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[markdown基本语法 标题用#表示，一个#表示一级标题，两个#表示二级标题，以此类推，一共六级标题。 例如下面所示 列表 *+空格 无序列表 数字+.+空格 有序列表 引用引用 像这样，操作为j尖括号 &gt; +引用文本即可 图片与链接操作如下图: 粗体与斜体用两个*包含一段文字即可使用粗体，**这里是粗体** 用一个\*包含一段文字就是斜体，*这里是斜体* 表格​ 表格的创建比较麻烦 12345| Tables | Are | Cool | | ------------- |:-------------:| -----:| | col 3 is | right-aligned | $1600 | | col 2 is | centered | $12 | | zebra stripes | are neat | $1 | 这是普通使用代码来写表格，但是考虑到这样写表格很麻烦，这里推荐一个轻量级编辑器Typora 下面是编辑器的创建表格操作 然后就可以看到创建出来的额表格了，如下图，是不是很方便！ 代码框作为一名优雅的程序员，要把代码优雅的放在文章里，那就使用&gt;code吧 12345678910def Select_Sort(A,len): for i in range(len): key = i for j in range(i+1,len): if A[j] &lt; A[key]: key = j if key != i: temp = A[key] A[key] = A[i] A[i] = temp 在Typora工具中的段落中亦可找到相应操作 分割线分割线的语法只需要另起一行，连续输入三个星号 *** 即可。 var ap = new APlayer({ element: document.getElementById("aplayer-NECOVdjW"), narrow: false, autoplay: true, showlrc: false, music: { title: "“国王与乞丐”", author: "华晨宇", url: "https://file.globalupload.io/fvBf86IOBS.mp3", pic: "https://i.kfs.io/album/global/7070089,0v1/fit/500x500.jpg", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Let‘s think！]]></title>
+    <url>%2F2019%2F03%2F27%2FSeconday%2F</url>
+    <content type="text"><![CDATA[前段日子看了一部日剧名字叫做《3年A半全员人质》，感觉收获还是蛮多的。它教会我们不仅要学会成熟，还要学会思考。Let’s think！]]></content>
+      <tags>
+        <tag>Life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello Hexo]]></title>
+    <url>%2F2019%2F03%2F25%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Start Today!Git常用命令创建用户名12$ git config --global user.name "yourname"$ git config --global user.email "youremail" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
