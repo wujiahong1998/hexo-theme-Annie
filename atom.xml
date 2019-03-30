@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>追梦异类的BLOCK</title>
+  
+  <subtitle>Victor&#39;s Home</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-03-27T13:10:41.182Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>吴嘉鸿</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客优化</title>
+    <link href="http://yoursite.com/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2019/03/27/Hexo博客优化/</id>
+    <published>2019-03-27T10:01:01.000Z</published>
+    <updated>2019-03-27T13:10:41.182Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;插入音乐🎵&quot;&gt;&lt;a href=&quot;#插入音乐🎵&quot; class=&quot;headerlink&quot; title=&quot;插入音乐🎵&quot;&gt;&lt;/a&gt;插入音乐🎵&lt;/h2&gt;&lt;p&gt;很多音乐网站因为版权原因无法生成外链，这里介绍的是自己生成的外链&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown的基本操作</title>
+    <link href="http://yoursite.com/2019/03/27/Markdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2019/03/27/Markdown的基本操作/</id>
+    <published>2019-03-27T03:58:02.000Z</published>
+    <updated>2019-03-27T09:18:34.801Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;&lt;em&gt;markdown基本语法&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Let‘s think！</title>
+    <link href="http://yoursite.com/2019/03/27/Seconday/"/>
+    <id>http://yoursite.com/2019/03/27/Seconday/</id>
+    <published>2019-03-26T17:01:33.000Z</published>
+    <updated>2019-03-27T05:09:54.760Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段日子看了一部日剧名字叫做《3年A半全员人质》，感觉收获还是蛮多的。它教会我们不仅要学会成熟，还要学会思考。Let’s think！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Life" scheme="http://yoursite.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Hexo</title>
+    <link href="http://yoursite.com/2019/03/25/hello-world/"/>
+    <id>http://yoursite.com/2019/03/25/hello-world/</id>
+    <published>2019-03-25T11:09:00.559Z</published>
+    <updated>2019-03-27T05:09:42.655Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Start-Today&quot;&gt;&lt;a href=&quot;#Start-Today&quot; class=&quot;headerlink&quot; title=&quot;Start Today!&quot;&gt;&lt;/a&gt;Start Today!&lt;/h1&gt;&lt;h2 id=&quot;Git常用命令&quot;&gt;&lt;a href=&quot;#Git常用命令&quot; class=&quot;headerlink&quot; title=&quot;Git常用命令&quot;&gt;&lt;/a&gt;Git常用命令&lt;/h2&gt;&lt;h3 id=&quot;创建用户名&quot;&gt;&lt;a href=&quot;#创建用户名&quot; class=&quot;headerlink&quot; title=&quot;创建用户名&quot;&gt;&lt;/a&gt;创建用户名&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &lt;span class=&quot;string&quot;&gt;&quot;yourname&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email &lt;span class=&quot;string&quot;&gt;&quot;youremail&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
