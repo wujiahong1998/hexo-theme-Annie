@@ -1063,7 +1063,7 @@ pre .javascript .function {
   right: 30px;
   z-index: 1050;
   padding: 0 6px;
-  width: 24px;
+  width: initial;
   background: #ff8b73;
   font-size: 12px;
   opacity: 0.6;
@@ -1839,7 +1839,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e55d4e;
+  background: #954d08;
 }
 .links-of-author-item {
   text-align: center;
