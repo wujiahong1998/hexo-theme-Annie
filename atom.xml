@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-27T13:10:41.182Z</updated>
+  <updated>2019-03-31T05:42:35.328Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学生会个人总结</title>
+    <link href="http://yoursite.com/2019/03/31/%E5%AD%A6%E7%94%9F%E4%BC%9A%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2019/03/31/学生会个人总结/</id>
+    <published>2019-03-31T05:36:55.000Z</published>
+    <updated>2019-03-31T05:42:35.328Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​        大二的下学期刚刚来临，马上也就要进入大三了。回首当初懵懂无知的我，啥也不知道，有的只是好奇。从第一次参加学生会的面试的彷徨到自己面试新生的坦然，从中是我的成长。进入的计软团委学生会之后，我也从中慢慢学习，渐渐的成长，知道了怎么合作，有了一颗上进的心。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="life" scheme="http://yoursite.com/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客优化</title>
