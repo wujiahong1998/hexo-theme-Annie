@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习,">
 
 
 
@@ -81,16 +81,20 @@
 
 
 
-<meta name="description" content="Always try to see the best in people.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="追梦异类的BLOCK">
-<meta property="og:url" content="http://wujiahong1998.github.io/index.html">
+<meta name="description" content="1.分治法的分析分治法往往会使用递归的方法，主要包含以下三个步骤  分解 解决 合并  使用递归方程对其运行时间进行分析 假设把原问题分解成a个子问题，每个子问题的规模是原问题的1/b，分解问题成子问题需要时间D(n)，合并子问题需要C(n)，那么可以得到如下的递归式：">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分治法">
+<meta property="og:url" content="http://wujiahong1998.github.io/2019/04/02/分治法/index.html">
 <meta property="og:site_name" content="追梦异类的BLOCK">
-<meta property="og:description" content="Always try to see the best in people.">
+<meta property="og:description" content="1.分治法的分析分治法往往会使用递归的方法，主要包含以下三个步骤  分解 解决 合并  使用递归方程对其运行时间进行分析 假设把原问题分解成a个子问题，每个子问题的规模是原问题的1/b，分解问题成子问题需要时间D(n)，合并子问题需要C(n)，那么可以得到如下的递归式：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://latex.codecogs.com/gif.latex?T(n)=&space;aT(n/b)+D(n)+C(n)">
+<meta property="og:updated_time" content="2019-04-02T13:04:06.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="追梦异类的BLOCK">
-<meta name="twitter:description" content="Always try to see the best in people.">
+<meta name="twitter:title" content="分治法">
+<meta name="twitter:description" content="1.分治法的分析分治法往往会使用递归的方法，主要包含以下三个步骤  分解 解决 合并  使用递归方程对其运行时间进行分析 假设把原问题分解成a个子问题，每个子问题的规模是原问题的1/b，分解问题成子问题需要时间D(n)，合并子问题需要C(n)，那么可以得到如下的递归式：">
+<meta name="twitter:image" content="https://latex.codecogs.com/gif.latex?T(n)=&space;aT(n/b)+D(n)+C(n)">
 
 
 
@@ -120,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://wujiahong1998.github.io/">
+  <link rel="canonical" href="http://wujiahong1998.github.io/2019/04/02/分治法/">
 
 
 
 
 
-  <title>追梦异类的BLOCK</title>
+  <title>分治法 | 追梦异类的BLOCK</title>
   
 
 
@@ -155,8 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,9 +304,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -333,9 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/02/分治法/" itemprop="url">分治法</a></h1>
+          <h1 class="post-title" itemprop="name headline">分治法</h1>
         
 
         <div class="post-meta">
@@ -395,9 +396,7 @@
       
 
       
-        
-          
-            <h2 id="1-分治法的分析"><a href="#1-分治法的分析" class="headerlink" title="1.分治法的分析"></a>1.分治法的分析</h2><p>分治法往往会使用递归的方法，主要包含以下三个步骤</p>
+        <h2 id="1-分治法的分析"><a href="#1-分治法的分析" class="headerlink" title="1.分治法的分析"></a>1.分治法的分析</h2><p>分治法往往会使用递归的方法，主要包含以下三个步骤</p>
 <ol>
 <li>分解</li>
 <li>解决</li>
@@ -407,14 +406,45 @@
 <p>假设把原问题分解成a个子问题，每个子问题的规模是原问题的1/b，分解问题成子问题需要时间D(n)，合并子问题需要C(n)，那么可以得到如下的递归式：</p>
 <p><a href="https://www.codecogs.com/eqnedit.php?latex=T(n)=&space;aT(n/b)&plus;D(n)&plus;C(n)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?T(n)=&space;aT(n/b)&plus;D(n)&plus;C(n)" title="T(n)= aT(n/b)+D(n)+C(n)"></a></p>
 
-          
-        
       
     </div>
     
     
     
 
+    
+    <div>
+    
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/04/02/分治法/">分治法</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 吴嘉鸿 的个人博客">吴嘉鸿</a></p>
+  <p><span>发布时间:</span>2019年04月02日 - 20:04</p>
+  <p><span>最后更新:</span>2019年04月02日 - 21:04</p>
+  <p><span>原始链接:</span><a href="/2019/04/02/分治法/" title="分治法">http://wujiahong1998.github.io/2019/04/02/分治法/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://wujiahong1998.github.io/2019/04/02/分治法/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+  });
+    });  
+</script>
+
+    </div>
     
 
     
@@ -425,286 +455,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wujiahong1998.github.io/2019/03/31/学生会个人总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="吴嘉鸿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/myPhotos/hicon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦异类的BLOCK">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/31/学生会个人总结/" itemprop="url">学生会个人总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-31T13:36:55+08:00">
-                2019-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/学习/" rel="tag"># 学习</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/31/学生会个人总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/31/学生会个人总结/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>​        大二的下学期刚刚来临，马上也就要进入大三了。回首当初懵懂无知的我，啥也不知道，有的只是好奇。从第一次参加学生会的面试的彷徨到自己面试新生的坦然，从中是我的成长。进入的计软团委学生会之后，我也从中慢慢学习，渐渐的成长，知道了怎么合作，有了一颗上进的心。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/31/学生会个人总结/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/31/学生会个人总结/" rel="next" title="学生会个人总结">
+                <i class="fa fa-chevron-left"></i> 学生会个人总结
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wujiahong1998.github.io/2019/03/27/Hexo博客优化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="吴嘉鸿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/myPhotos/hicon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦异类的BLOCK">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/27/Hexo博客优化/" itemprop="url">Hexo博客优化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T18:01:01+08:00">
-                2019-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/27/Hexo博客优化/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/27/Hexo博客优化/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="插入音乐🎵"><a href="#插入音乐🎵" class="headerlink" title="插入音乐🎵"></a>插入音乐🎵</h2><p>很多音乐网站因为版权原因无法生成外链，这里介绍的是自己生成的外链</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/27/Hexo博客优化/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -714,425 +494,32 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wujiahong1998.github.io/2019/03/27/Markdown的基本操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="吴嘉鸿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/myPhotos/hicon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦异类的BLOCK">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/27/Markdown的基本操作/" itemprop="url">Markdown的基本操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T11:58:02+08:00">
-                2019-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/27/Markdown的基本操作/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/27/Markdown的基本操作/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong><em>markdown基本语法</em></strong></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/27/Markdown的基本操作/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wujiahong1998.github.io/2019/03/27/Seconday/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="吴嘉鸿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/myPhotos/hicon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦异类的BLOCK">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/27/Seconday/" itemprop="url">Let‘s think！</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-27T01:01:33+08:00">
-                2019-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/27/Seconday/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/27/Seconday/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>前段日子看了一部日剧名字叫做《3年A半全员人质》，感觉收获还是蛮多的。它教会我们不仅要学会成熟，还要学会思考。Let’s think！</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/27/Seconday/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wujiahong1998.github.io/2019/03/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="吴嘉鸿">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/myPhotos/hicon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="追梦异类的BLOCK">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/25/hello-world/" itemprop="url">Hello Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-25T19:09:00+08:00">
-                2019-03-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/25/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/25/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Start-Today"><a href="#Start-Today" class="headerlink" title="Start Today!"></a>Start Today!</h1><h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="创建用户名"><a href="#创建用户名" class="headerlink" title="创建用户名"></a>创建用户名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"yourname"</span></span><br><span class="line">$ git config --global user.email <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/25/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
 
 
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1153,8 +540,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1252,6 +648,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-分治法的分析"><span class="nav-number">1.</span> <span class="nav-text">1.分治法的分析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1401,6 +813,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1418,6 +834,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://wujiahong1998.github.io/2019/04/02/分治法/';
+          this.page.identifier = '2019/04/02/分治法/';
+          this.page.title = '分治法';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
