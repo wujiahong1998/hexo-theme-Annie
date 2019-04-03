@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wujiahong1998.github.io/"/>
-  <updated>2019-04-03T16:25:44.176Z</updated>
+  <updated>2019-04-03T16:48:12.930Z</updated>
   <id>http://wujiahong1998.github.io/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="http://wujiahong1998.github.io/2019/04/04/HEXO%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://wujiahong1998.github.io/2019/04/04/HEXO博客优化（一）/</id>
     <published>2019-04-03T16:21:18.000Z</published>
-    <updated>2019-04-03T16:25:44.176Z</updated>
+    <updated>2019-04-03T16:48:12.930Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;h1 id=&quot;HEXO博客（一）&quot;&gt;&lt;a href=&quot;#HEXO博客（一）&quot; class=&quot;headerlink&quot; title=&quot;HEXO博客（一）&quot;&gt;&lt;/a&gt;HEXO博客（一）&lt;/h1&gt;&lt;h3 id=&quot;添加居中模块&quot;&gt;&lt;a href=&quot;#添加居中模块&quot; class=&quot;headerlink&quot; title=&quot;添加居中模块&quot;&gt;&lt;/a&gt;添加居中模块&lt;/h3&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;blockquote&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;blockquote-center&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;多去发掘别人身上的闪光点&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;blockquote&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote class=&quot;blockquote-center&quot;&gt;多去发掘别人身上的闪光点&lt;/blockquote&gt;
     
     </summary>
     

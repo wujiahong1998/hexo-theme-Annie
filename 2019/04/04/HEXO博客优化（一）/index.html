@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="HEXO博客（一）添加居中模块1&amp;lt;blockquote class=&quot;blockquote-center&quot;&amp;gt;多去发掘别人身上的闪光点&amp;lt;/blockquote&amp;gt; 多去发掘别人身上的闪光点  添加最近访客在markdown文件指定地方添加以下的代码 1&amp;lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;39&quot; data-avat">
+<meta name="description" content="HEXO博客（一）添加居中模块1&amp;lt;blockquote class=&quot;blockquote-center&quot;&amp;gt;多去发掘别人身上的闪光点&amp;lt;/blockquote&amp;gt; 多去发掘别人身上的闪光点">
 <meta name="keywords" content="HEXO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HEXO博客优化（一）">
 <meta property="og:url" content="http://wujiahong1998.github.io/2019/04/04/HEXO博客优化（一）/index.html">
 <meta property="og:site_name" content="追梦异类的BLOCK">
-<meta property="og:description" content="HEXO博客（一）添加居中模块1&amp;lt;blockquote class=&quot;blockquote-center&quot;&amp;gt;多去发掘别人身上的闪光点&amp;lt;/blockquote&amp;gt; 多去发掘别人身上的闪光点  添加最近访客在markdown文件指定地方添加以下的代码 1&amp;lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;39&quot; data-avat">
+<meta property="og:description" content="HEXO博客（一）添加居中模块1&amp;lt;blockquote class=&quot;blockquote-center&quot;&amp;gt;多去发掘别人身上的闪光点&amp;lt;/blockquote&amp;gt; 多去发掘别人身上的闪光点">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T16:25:44.176Z">
+<meta property="og:updated_time" content="2019-04-03T16:48:12.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO博客优化（一）">
-<meta name="twitter:description" content="HEXO博客（一）添加居中模块1&amp;lt;blockquote class=&quot;blockquote-center&quot;&amp;gt;多去发掘别人身上的闪光点&amp;lt;/blockquote&amp;gt; 多去发掘别人身上的闪光点  添加最近访客在markdown文件指定地方添加以下的代码 1&amp;lt;div class=&quot;ds-recent-visitors&quot; data-num-items=&quot;39&quot; data-avat">
+<meta name="twitter:description" content="HEXO博客（一）添加居中模块1&amp;lt;blockquote class=&quot;blockquote-center&quot;&amp;gt;多去发掘别人身上的闪光点&amp;lt;/blockquote&amp;gt; 多去发掘别人身上的闪光点">
 
 
 
@@ -398,11 +398,14 @@
         <h1 id="HEXO博客（一）"><a href="#HEXO博客（一）" class="headerlink" title="HEXO博客（一）"></a>HEXO博客（一）</h1><h3 id="添加居中模块"><a href="#添加居中模块" class="headerlink" title="添加居中模块"></a>添加居中模块</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">"blockquote-center"</span>&gt;</span>多去发掘别人身上的闪光点<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote class="blockquote-center">多去发掘别人身上的闪光点</blockquote>
 
-<h3 id="添加最近访客"><a href="#添加最近访客" class="headerlink" title="添加最近访客"></a>添加最近访客</h3><p>在markdown文件指定地方添加以下的代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-recent-visitors"</span> <span class="attr">data-num-items</span>=<span class="string">"39"</span> <span class="attr">data-avatar-size</span>=<span class="string">"40"</span> <span class="attr">id</span>=<span class="string">"ds-recent-visitors"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>最近访客</p>
-<div class="ds-recent-visitors" data-num-items="39" data-avatar-size="40" id="ds-recent-visitors"></div>
-
+<a id="more"></a>
+<h3 id="添加小红心"><a href="#添加小红心" class="headerlink" title="添加小红心"></a>添加小红心</h3><ol>
+<li><p>将 <a href="https://github.com/Neveryu/Neveryu.github.io/blob/master/js/src/love.js" target="_blank" rel="noopener">love.js</a> 文件添加到 \themes\next\source\js\src 文件目录下。</p>
+</li>
+<li><p>找到 <code>\themes\next\layout\_layout.swing</code> 文件， <strong>在文件的后面， 标签之前</strong> 添加以下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/love.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -627,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HEXO博客（一）"><span class="nav-number">1.</span> <span class="nav-text">HEXO博客（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加居中模块"><span class="nav-number">1.0.1.</span> <span class="nav-text">添加居中模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加最近访客"><span class="nav-number">1.0.2.</span> <span class="nav-text">添加最近访客</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HEXO博客（一）"><span class="nav-number">1.</span> <span class="nav-text">HEXO博客（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加居中模块"><span class="nav-number">1.0.1.</span> <span class="nav-text">添加居中模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加小红心"><span class="nav-number">1.0.2.</span> <span class="nav-text">添加小红心</span></a></li></ol></li></ol></div>
             
 
           </div>
