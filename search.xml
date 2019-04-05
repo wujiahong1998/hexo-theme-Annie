@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计算机伦理归纳]]></title>
+    <url>%2F2019%2F04%2F05%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BC%A6%E7%90%86%E5%BD%92%E7%BA%B3%2F</url>
+    <content type="text"><![CDATA[[TOC] 伦理伦理学和计算机伦理学的基本概念伦理学伦理的基本概念是研究社会关系和秩序，即人与人，人与社会，人与自然之间的关系，以及社会生活应该是什么样的秩序，也称为道德哲学。 伦理学是为人们建立快乐的、有秩序的生活的理论，属于应用哲学的一个分支。研究关系，研究秩序的学课称为伦理学。 伦理学是一门研究世间万物之间的关系，研究宇宙万物之间如何维持一个良好秩序的学科。 计算机伦理学计算机伦理学是讨论、研究并教育人们如何使用计算机技术为人类的生活带来健康和幸福，控制最小化由它带来的不良影响的社会学科。 研究方法计算机伦理学采取了多学科合作、实证研究和案例分析为主的技术路线，也有采用社会调查的研究方法。 实证研究划分为实地研究、实验研究和调查研究。 伦理学的分析方法伦理学理论 相对主义 美德论 功利主义 义务论 伦理抉择5个基本原则 尊重生命原则 社会公正原则 自主原则 诚信原则 知情同意原则]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HEXO博客优化（一）]]></title>
     <url>%2F2019%2F04%2F04%2FHEXO%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
     <content type="text"><![CDATA[HEXO博客（一）添加居中模块1&lt;blockquote class="blockquote-center"&gt;多去发掘别人身上的闪光点&lt;/blockquote&gt; 多去发掘别人身上的闪光点 添加小红心 将 love.js 文件添加到 \themes\next\source\js\src 文件目录下。 找到 \themes\next\layout\_layout.swing 文件， 在文件的后面， 标签之前 添加以下代码： 12&lt;!-- 页面点击小红心 --&gt;&lt;script type="text/javascript" src="/js/src/love.js"&gt;&lt;/script&gt;]]></content>
@@ -35,7 +43,7 @@
   <entry>
     <title><![CDATA[Markdown的基本操作]]></title>
     <url>%2F2019%2F03%2F27%2FMarkdown%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[markdown基本语法 标题用#表示，一个#表示一级标题，两个#表示二级标题，以此类推，一共六级标题。 例如下面所示 列表 *+空格 无序列表 数字+.+空格 有序列表 引用引用 像这样，操作为j尖括号 &gt; +引用文本即可 图片与链接操作如下图: 粗体与斜体用两个*包含一段文字即可使用粗体，**这里是粗体** 用一个\*包含一段文字就是斜体，*这里是斜体* 表格​ 表格的创建比较麻烦 12345| Tables | Are | Cool | | ------------- |:-------------:| -----:| | col 3 is | right-aligned | $1600 | | col 2 is | centered | $12 | | zebra stripes | are neat | $1 | 这是普通使用代码来写表格，但是考虑到这样写表格很麻烦，这里推荐一个轻量级编辑器Typora 下面是编辑器的创建表格操作 然后就可以看到创建出来的额表格了，如下图，是不是很方便！ 代码框作为一名优雅的程序员，要把代码优雅的放在文章里，那就使用&gt;code吧 12345678910def Select_Sort(A,len): for i in range(len): key = i for j in range(i+1,len): if A[j] &lt; A[key]: key = j if key != i: temp = A[key] A[key] = A[i] A[i] = temp 在Typora工具中的段落中亦可找到相应操作 分割线分割线的语法只需要另起一行，连续输入三个星号 *** 即可。 var ap = new APlayer({ element: document.getElementById("aplayer-uTFfnbsx"), narrow: false, autoplay: true, showlrc: false, music: { title: "“国王与乞丐”", author: "华晨宇", url: "https://file.globalupload.io/fvBf86IOBS.mp3", pic: "https://i.kfs.io/album/global/7070089,0v1/fit/500x500.jpg", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
+    <content type="text"><![CDATA[markdown基本语法 标题用#表示，一个#表示一级标题，两个#表示二级标题，以此类推，一共六级标题。 例如下面所示 列表 *+空格 无序列表 数字+.+空格 有序列表 引用引用 像这样，操作为j尖括号 &gt; +引用文本即可 图片与链接操作如下图: 粗体与斜体用两个*包含一段文字即可使用粗体，**这里是粗体** 用一个\*包含一段文字就是斜体，*这里是斜体* 表格​ 表格的创建比较麻烦 12345| Tables | Are | Cool | | ------------- |:-------------:| -----:| | col 3 is | right-aligned | $1600 | | col 2 is | centered | $12 | | zebra stripes | are neat | $1 | 这是普通使用代码来写表格，但是考虑到这样写表格很麻烦，这里推荐一个轻量级编辑器Typora 下面是编辑器的创建表格操作 然后就可以看到创建出来的额表格了，如下图，是不是很方便！ 代码框作为一名优雅的程序员，要把代码优雅的放在文章里，那就使用&gt;code吧 12345678910def Select_Sort(A,len): for i in range(len): key = i for j in range(i+1,len): if A[j] &lt; A[key]: key = j if key != i: temp = A[key] A[key] = A[i] A[i] = temp 在Typora工具中的段落中亦可找到相应操作 分割线分割线的语法只需要另起一行，连续输入三个星号 *** 即可。 var ap = new APlayer({ element: document.getElementById("aplayer-DuEDpGIr"), narrow: false, autoplay: true, showlrc: false, music: { title: "“国王与乞丐”", author: "华晨宇", url: "https://file.globalupload.io/fvBf86IOBS.mp3", pic: "https://i.kfs.io/album/global/7070089,0v1/fit/500x500.jpg", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap);]]></content>
       <tags>
         <tag>学习</tag>
       </tags>

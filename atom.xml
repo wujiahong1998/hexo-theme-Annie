@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wujiahong1998.github.io/"/>
-  <updated>2019-04-03T16:48:12.930Z</updated>
+  <updated>2019-04-05T03:25:40.761Z</updated>
   <id>http://wujiahong1998.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机伦理归纳</title>
+    <link href="http://wujiahong1998.github.io/2019/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BC%A6%E7%90%86%E5%BD%92%E7%BA%B3/"/>
+    <id>http://wujiahong1998.github.io/2019/04/05/计算机伦理归纳/</id>
+    <published>2019-04-05T03:21:20.000Z</published>
+    <updated>2019-04-05T03:25:40.761Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;伦理&quot;&gt;&lt;a href=&quot;#伦理&quot; class=&quot;headerlink&quot; title=&quot;伦理&quot;&gt;&lt;/a&gt;伦理&lt;/h1&gt;&lt;h2 id=&quot;伦理学和计算机伦理学的基本概念&quot;&gt;&lt;a href=&quot;#伦理学和计算机伦理学的基本概念&quot; class=&quot;headerlink&quot; title=&quot;伦理学和计算机伦理学的基本概念&quot;&gt;&lt;/a&gt;伦理学和计算机伦理学的基本概念&lt;/h2&gt;&lt;h3 id=&quot;伦理学&quot;&gt;&lt;a href=&quot;#伦理学&quot; class=&quot;headerlink&quot; title=&quot;伦理学&quot;&gt;&lt;/a&gt;伦理学&lt;/h3&gt;&lt;p&gt;伦理的基本概念是研究社会关系和秩序，即人与人，人与社会，人与自然之间的关系，以及社会生活应该是什么样的秩序，也称为道德哲学。&lt;/p&gt;
+&lt;p&gt;伦理学是为人们建立快乐的、有秩序的生活的理论，属于应用哲学的一个分支。研究关系，研究秩序的学课称为伦理学。&lt;/p&gt;
+&lt;p&gt;伦理学是一门研究世间万物之间的关系，研究宇宙万物之间如何维持一个良好秩序的学科。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://wujiahong1998.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>HEXO博客优化（一）</title>
