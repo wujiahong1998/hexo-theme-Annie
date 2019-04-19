@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wujiahong1998.github.io/"/>
-  <updated>2019-04-08T08:17:48.597Z</updated>
+  <updated>2019-04-19T16:11:35.991Z</updated>
   <id>http://wujiahong1998.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://wujiahong1998.github.io/2019/04/19/C%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/"/>
+    <id>http://wujiahong1998.github.io/2019/04/19/C程序的编译过程/</id>
+    <published>2019-04-19T13:57:35.000Z</published>
+    <updated>2019-04-19T16:11:35.991Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;前面的话&quot;&gt;&lt;a href=&quot;#前面的话&quot; class=&quot;headerlink&quot; title=&quot;前面的话&quot;&gt;&lt;/a&gt;前面的话&lt;/h4&gt;&lt;p&gt;学了这么久C++，但还是真不知道C++是如何编译成可执行文件的，下面我们就来探索探索C++的编译过程！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://wujiahong1998.github.io/tags/C/"/>
+    
+      <category term="学习" scheme="http://wujiahong1998.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux(一) 文件及目录基本操作</title>
