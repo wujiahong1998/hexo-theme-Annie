@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wujiahong1998.github.io/"/>
-  <updated>2019-04-19T16:20:23.635Z</updated>
+  <updated>2019-05-10T16:30:48.061Z</updated>
   <id>http://wujiahong1998.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>专业研究英语学习</title>
+    <link href="http://wujiahong1998.github.io/2019/05/11/%E4%B8%93%E4%B8%9A%E7%A0%94%E7%A9%B6%E8%8B%B1%E8%AF%AD/"/>
+    <id>http://wujiahong1998.github.io/2019/05/11/专业研究英语/</id>
+    <published>2019-05-11T13:57:35.000Z</published>
+    <updated>2019-05-10T16:30:48.061Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;前面的话&quot;&gt;&lt;a href=&quot;#前面的话&quot; class=&quot;headerlink&quot; title=&quot;前面的话&quot;&gt;&lt;/a&gt;前面的话&lt;/h4&gt;&lt;h1 id=&quot;专业研究英语&quot;&gt;&lt;a href=&quot;#专业研究英语&quot; class=&quot;headerlink&quot; title=&quot;专业研究英语&quot;&gt;&lt;/a&gt;专业研究英语&lt;/h1&gt;&lt;h2 id=&quot;1-Modles-Deep-Learning&quot;&gt;&lt;a href=&quot;#1-Modles-Deep-Learning&quot; class=&quot;headerlink&quot; title=&quot;1.Modles(Deep Learning)&quot;&gt;&lt;/a&gt;1.Modles(Deep Learning)&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;SVM&lt;/li&gt;
+&lt;li&gt;Boosting&lt;/li&gt;
+&lt;li&gt;Decision tree&lt;/li&gt;
+&lt;li&gt;KNN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;2-Classical-Deep-Models&quot;&gt;&lt;a href=&quot;#2-Classical-Deep-Models&quot; class=&quot;headerlink&quot; title=&quot;2.Classical Deep Models&quot;&gt;&lt;/a&gt;2.Classical Deep Models&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;CNN (Convolutional Neural Networks ）————卷积神经网络&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DBN(Deep Belief Net)————深度置信网络&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Auto‐encoder————自编码&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://wujiahong1998.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>C程序的编译过程</title>
