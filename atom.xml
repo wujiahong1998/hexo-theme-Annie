@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wujiahong1998.github.io/"/>
-  <updated>2019-05-18T14:04:25.368Z</updated>
+  <updated>2019-05-24T13:17:49.469Z</updated>
   <id>http://wujiahong1998.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MechineLearning</title>
+    <link href="http://wujiahong1998.github.io/2019/05/24/MechineLearning/"/>
+    <id>http://wujiahong1998.github.io/2019/05/24/MechineLearning/</id>
+    <published>2019-05-24T13:12:30.000Z</published>
+    <updated>2019-05-24T13:17:49.469Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Python学习路线&quot;&gt;&lt;a href=&quot;#Python学习路线&quot; class=&quot;headerlink&quot; title=&quot;Python学习路线&quot;&gt;&lt;/a&gt;Python学习路线&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://wujiahong1998.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Dynamic</title>
