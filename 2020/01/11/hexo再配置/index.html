@@ -14,13 +14,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -100,7 +93,7 @@
 <meta property="og:image" content="http://wujiahong1998.github.io/2020/01/11/hexo再配置/fileSet.png">
 <meta property="og:image" content="http://wujiahong1998.github.io/2020/01/11/hexo再配置/setbottom.png">
 <meta property="og:image" content="http://wujiahong1998.github.io/2020/01/11/hexo再配置/socialIcon.png">
-<meta property="og:updated_time" content="2020-01-11T16:02:21.851Z">
+<meta property="og:updated_time" content="2020-01-11T18:36:38.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo再配置">
 <meta name="twitter:description" content="Hexo的一些配置之前配置了一些，现在再配置一些">
@@ -391,6 +384,37 @@
           
 
           
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  8
+                </span>
+              
+            </div>
+          
 
           
 
@@ -459,8 +483,23 @@
 <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[社交平台名]: [社交地址] || [图标名称]</span><br></pre></td></tr></table></figure></div>
 <p><img src="/2020/01/11/hexo再配置/socialIcon.png" alt></p>
 <p>图标可以去<a href="https://links.jianshu.com/go?to=http%3A%2F%2Ffontawesome.io%2Ficons%2F" target="_blank" rel="noopener">Font Awesome Icon</a>网站去找，找到后复制名字到相应的位置即可。</p>
-<h2 id="网站底部加上访问量"><a href="#网站底部加上访问量" class="headerlink" title="网站底部加上访问量"></a>网站底部加上访问量</h2><p>打开<code>Blog/themes/next/layout/_partials/footer.swig</code>文件，在<code>copyright</code>加上如下代码：</p>
-
+<h2 id="添加热度"><a href="#添加热度" class="headerlink" title="添加热度"></a>添加热度</h2><p>进入<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fleancloud.cn%2F" target="_blank" rel="noopener">LeanCloud官网</a>，进行账号注册。登录后，进入控制台，创建应用，应用名为<code>Hexo</code>如下图所示：</p>
+<h2 id="访问量"><a href="#访问量" class="headerlink" title="访问量"></a>访问量</h2><h2 id="网站底部字数统计"><a href="#网站底部字数统计" class="headerlink" title="网站底部字数统计"></a>网站底部字数统计</h2><p>安装<code>hexo</code>插件，切换到根目录：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure></div>
+<p>在<code>Blog/themes/next/layout/_partials/footer.swig</code>末尾添加代码：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"theme-info"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"powered-by"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span>&gt;</span>博客全站共&#123;&#123; totalcount(site) &#125;&#125;字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p>在图标网站找一张你喜欢的图标（大：32x32 小：16x16），图标网站：<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.easyicon.net%2F" target="_blank" rel="noopener">easyicon</a>或者<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fwww.iconfont.cn%2F" target="_blank" rel="noopener">阿里巴巴矢量图标库</a>。将下载下来的小图和中图放在<code>Blog/themes/next/source/images</code>，将默认的两张图片替换掉。命名和默认的一样也可以自己定义：</p>
+<p>修改主题配置文件，如果你自定义了图片名字，需要做修改：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># For example, you put your favicons into `hexo-site/source/images` directory.</span><br><span class="line"># Then need to rename &amp; redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.</span><br><span class="line">favicon:</span><br><span class="line">  small: /images/favicon-16x16-next.png  //16X16小图</span><br><span class="line">  medium: /images/favicon-32x32-next.png  //32X32大图</span><br><span class="line">  apple_touch_icon: /images/apple-touch-icon-next.png  //apple-touch-icon </span><br><span class="line">  safari_pinned_tab: /images/logo.svg </span><br><span class="line">  #android_manifest: /images/manifest.json</span><br><span class="line">  #ms_browserconfig: /images/browserconfig.xml</span><br></pre></td></tr></table></figure></div>
+<h2 id="实现文章统计功能"><a href="#实现文章统计功能" class="headerlink" title="实现文章统计功能"></a>实现文章统计功能</h2><ul>
+<li><p>安装Hexo插件，参考<strong>网站底部字数统计</strong>。</p>
+</li>
+<li><p>编辑主题配置文件，配置如下：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: true</span><br><span class="line">  totalcount: true</span><br><span class="line">  separated_meta: true</span><br></pre></td></tr></table></figure></div>
+</li>
+</ul>
+<h2 id="添加来必力云跟帖功能"><a href="#添加来必力云跟帖功能" class="headerlink" title="添加来必力云跟帖功能"></a>添加来必力云跟帖功能</h2><p>首先去<a href="https://links.jianshu.com/go?to=https%3A%2F%2Flivere.com%2F" target="_blank" rel="noopener">来必力</a>注册账号，然后进入后台管理系统，如下图所示</p>
+<h2 id="添加jiathis分享"><a href="#添加jiathis分享" class="headerlink" title="添加jiathis分享"></a>添加jiathis分享</h2>
       
     </div>
     
@@ -489,7 +528,7 @@
   <p><span>本文标题:</span><a href="/2020/01/11/hexo再配置/">hexo再配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 吴嘉鸿 的个人博客">吴嘉鸿</a></p>
   <p><span>发布时间:</span>2020年01月11日 - 20:01</p>
-  <p><span>最后更新:</span>2020年01月12日 - 00:01</p>
+  <p><span>最后更新:</span>2020年01月12日 - 02:01</p>
   <p><span>原始链接:</span><a href="/2020/01/11/hexo再配置/" title="hexo再配置">http://wujiahong1998.github.io/2020/01/11/hexo再配置/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://wujiahong1998.github.io/2020/01/11/hexo再配置/" aria-label="复制成功！"></i></span>
   </p>
@@ -779,7 +818,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo的一些配置"><span class="nav-number">1.</span> <span class="nav-text">Hexo的一些配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切换主题"><span class="nav-number">1.1.</span> <span class="nav-text">切换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文章"><span class="nav-number">1.2.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现fork-me-on-github"><span class="nav-number">1.3.</span> <span class="nav-text">实现fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章末尾添加“文章结束”标记"><span class="nav-number">1.4.</span> <span class="nav-text">文章末尾添加“文章结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章显示一部分"><span class="nav-number">1.5.</span> <span class="nav-text">文章显示一部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">1.6.</span> <span class="nav-text">修改代码块自定义样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#events-js代码："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">events.js代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#codeblock-js代码："><span class="nav-number">1.6.0.2.</span> <span class="nav-text">codeblock.js代码：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入css"><span class="nav-number">1.6.1.</span> <span class="nav-text">引入css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置引用"><span class="nav-number">1.6.2.</span> <span class="nav-text">配置引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块复制功能"><span class="nav-number">1.7.</span> <span class="nav-text">代码块复制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">1.8.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部加上访问量"><span class="nav-number">1.9.</span> <span class="nav-text">网站底部加上访问量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo的一些配置"><span class="nav-number">1.</span> <span class="nav-text">Hexo的一些配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切换主题"><span class="nav-number">1.1.</span> <span class="nav-text">切换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文章"><span class="nav-number">1.2.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现fork-me-on-github"><span class="nav-number">1.3.</span> <span class="nav-text">实现fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章末尾添加“文章结束”标记"><span class="nav-number">1.4.</span> <span class="nav-text">文章末尾添加“文章结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章显示一部分"><span class="nav-number">1.5.</span> <span class="nav-text">文章显示一部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">1.6.</span> <span class="nav-text">修改代码块自定义样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#events-js代码："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">events.js代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#codeblock-js代码："><span class="nav-number">1.6.0.2.</span> <span class="nav-text">codeblock.js代码：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入css"><span class="nav-number">1.6.1.</span> <span class="nav-text">引入css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置引用"><span class="nav-number">1.6.2.</span> <span class="nav-text">配置引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块复制功能"><span class="nav-number">1.7.</span> <span class="nav-text">代码块复制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">1.8.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加热度"><span class="nav-number">1.9.</span> <span class="nav-text">添加热度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问量"><span class="nav-number">1.10.</span> <span class="nav-text">访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">1.11.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置网站的图标Favicon"><span class="nav-number">1.12.</span> <span class="nav-text">设置网站的图标Favicon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现文章统计功能"><span class="nav-number">1.13.</span> <span class="nav-text">实现文章统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加来必力云跟帖功能"><span class="nav-number">1.14.</span> <span class="nav-text">添加来必力云跟帖功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加jiathis分享"><span class="nav-number">1.15.</span> <span class="nav-text">添加jiathis分享</span></a></li></ol></div>
             
 
           </div>
@@ -807,6 +846,26 @@
   <span class="author" itemprop="copyrightHolder">吴嘉鸿</span>
 
   
+  
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共8.9k字</span>
+</div>
         
 
 
