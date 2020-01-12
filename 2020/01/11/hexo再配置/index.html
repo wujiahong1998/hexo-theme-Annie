@@ -131,7 +131,7 @@
 <meta property="og:image" content="http://wujiahong1998.github.io/2020/01/11/hexo再配置/image-20200112201854386.png">
 <meta property="og:image" content="http://wujiahong1998.github.io/2020/01/11/hexo再配置/image-20200112202639461.png">
 <meta property="og:image" content="http://wujiahong1998.github.io/2020/01/11/hexo再配置/image-20200112204119472.png">
-<meta property="og:updated_time" content="2020-01-12T13:18:31.441Z">
+<meta property="og:updated_time" content="2020-01-12T14:56:25.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo再配置">
 <meta name="twitter:description" content="Hexo的一些配置之前配置了一些，现在再配置一些">
@@ -195,10 +195,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  <!--share.js-->
-  <link rel="stylesheet" href="/dist/css/share.min.css">
-  <script src="/dist/js/social-share.min.js"></script>
-  
+
   
   
     
@@ -446,7 +443,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  5k
+                  7k
                 </span>
               
 
@@ -462,7 +459,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  26
+                  37
                 </span>
               
             </div>
@@ -643,8 +640,26 @@
 </li>
 <li><p>主题配置文件增加</p>
 <div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="YML"><figure class="iseeu highlight /yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">share_js:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></div>
+<p>失败…</p>
 </li>
 </ol>
+<h2 id="鼠标样式设置"><a href="#鼠标样式设置" class="headerlink" title="鼠标样式设置"></a>鼠标样式设置</h2><p>在 /themes/next/source/css/_custom/custom.styl 添加样式：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 鼠标样式 */</span></span><br><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: <span class="built_in">url</span>(/images/default.cur),auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-pseudo">:link</span> &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: <span class="built_in">url</span>(/images/pointer.cur),auto</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="打字特效-（评论、留言）"><a href="#打字特效-（评论、留言）" class="headerlink" title="打字特效 （评论、留言）"></a>打字特效 （评论、留言）</h2><p>此功能主要通过 JS 监听页面的 input 输入框事件来实现。首先在主题 _config.yml 中添加动态配置项</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="YML"><figure class="iseeu highlight /yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">typing_effect:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  colorful:</span> <span class="literal">true</span>  <span class="comment"># 礼花</span></span><br><span class="line"><span class="attr">  shake:</span> <span class="literal">false</span>  <span class="comment"># 震动</span></span><br></pre></td></tr></table></figure></div>
+<p>在 /themes/next/layout/_custom/custom.swig 中引入依赖</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.typing_effect %&#125;</span><br><span class="line">  &lt;script src=<span class="string">"/js/src/activate-power-mode.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    POWERMODE.colorful = &#123;&#123; theme.typing_effect.colorful &#125;&#125;;</span><br><span class="line">    POWERMODE.shake = &#123;&#123; theme.typing_effect.shake &#125;&#125;;</span><br><span class="line">    <span class="built_in">document</span>.body.addEventListener(<span class="string">'input'</span>, POWERMODE);</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure></div>
+<p>其中的 activate-power-mode.min.js 位于 /themes/next/source/js/src/ 目录，代码如下</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">webpackUniversalModuleDefinition</span>(<span class="params">root,factory</span>)</span>&#123;<span class="keyword">if</span>(<span class="keyword">typeof</span> exports===<span class="string">'object'</span>&amp;&amp;<span class="keyword">typeof</span> <span class="built_in">module</span>===<span class="string">'object'</span>)<span class="built_in">module</span>.exports=factory();<span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">typeof</span> define===<span class="string">'function'</span>&amp;&amp;define.amd)define([],factory);<span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">typeof</span> exports===<span class="string">'object'</span>)exports[<span class="string">"POWERMODE"</span>]=factory();<span class="keyword">else</span> root[<span class="string">"POWERMODE"</span>]=factory()&#125;)(<span class="keyword">this</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span>(<span class="function"><span class="keyword">function</span>(<span class="params">modules</span>)</span>&#123;<span class="keyword">var</span> installedModules=&#123;&#125;;<span class="function"><span class="keyword">function</span> <span class="title">__webpack_require__</span>(<span class="params">moduleId</span>)</span>&#123;<span class="keyword">if</span>(installedModules[moduleId])<span class="keyword">return</span> installedModules[moduleId].exports;<span class="keyword">var</span> <span class="built_in">module</span>=installedModules[moduleId]=&#123;<span class="attr">exports</span>:&#123;&#125;,<span class="attr">id</span>:moduleId,<span class="attr">loaded</span>:<span class="literal">false</span>&#125;;modules[moduleId].call(<span class="built_in">module</span>.exports,<span class="built_in">module</span>,<span class="built_in">module</span>.exports,__webpack_require__);<span class="built_in">module</span>.loaded=<span class="literal">true</span>;<span class="keyword">return</span> <span class="built_in">module</span>.exports&#125;__webpack_require__.m=modules;__webpack_require__.c=installedModules;__webpack_require__.p=<span class="string">""</span>;<span class="keyword">return</span> __webpack_require__(<span class="number">0</span>)&#125;)([<span class="function"><span class="keyword">function</span>(<span class="params">module,exports,__webpack_require__</span>)</span>&#123;<span class="string">'use strict'</span>;<span class="keyword">var</span> canvas=<span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);canvas.width=<span class="built_in">window</span>.innerWidth;canvas.height=<span class="built_in">window</span>.innerHeight;canvas.style.cssText=<span class="string">'position:fixed;top:0;left:0;pointer-events:none;z-index:999999'</span>;<span class="built_in">window</span>.addEventListener(<span class="string">'resize'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;canvas.width=<span class="built_in">window</span>.innerWidth;canvas.height=<span class="built_in">window</span>.innerHeight&#125;);<span class="built_in">document</span>.body.appendChild(canvas);<span class="keyword">var</span> context=canvas.getContext(<span class="string">'2d'</span>);<span class="keyword">var</span> particles=[];<span class="keyword">var</span> particlePointer=<span class="number">0</span>;POWERMODE.shake=<span class="literal">true</span>;<span class="function"><span class="keyword">function</span> <span class="title">getRandom</span>(<span class="params">min,max</span>)</span>&#123;<span class="keyword">return</span> <span class="built_in">Math</span>.random()*(max-min)+min&#125;<span class="function"><span class="keyword">function</span> <span class="title">getColor</span>(<span class="params">el</span>)</span>&#123;<span class="keyword">if</span>(POWERMODE.colorful)&#123;<span class="keyword">var</span> u=getRandom(<span class="number">0</span>,<span class="number">360</span>);<span class="keyword">return</span><span class="string">'hsla('</span>+getRandom(u<span class="number">-10</span>,u+<span class="number">10</span>)+<span class="string">', 100%, '</span>+getRandom(<span class="number">50</span>,<span class="number">80</span>)+<span class="string">'%, '</span>+<span class="number">1</span>+<span class="string">')'</span>&#125;<span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="built_in">window</span>.getComputedStyle(el).color&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">getCaret</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> el=<span class="built_in">document</span>.activeElement;<span class="keyword">var</span> bcr;<span class="keyword">if</span>(el.tagName===<span class="string">'TEXTAREA'</span>||(el.tagName===<span class="string">'INPUT'</span>&amp;&amp;el.getAttribute(<span class="string">'type'</span>)===<span class="string">'text'</span>))&#123;<span class="keyword">var</span> offset=__webpack_require__(<span class="number">1</span>)(el,el.selectionStart);bcr=el.getBoundingClientRect();<span class="keyword">return</span>&#123;<span class="attr">x</span>:offset.left+bcr.left,<span class="attr">y</span>:offset.top+bcr.top,<span class="attr">color</span>:getColor(el)&#125;&#125;<span class="keyword">var</span> selection=<span class="built_in">window</span>.getSelection();<span class="keyword">if</span>(selection.rangeCount)&#123;<span class="keyword">var</span> range=selection.getRangeAt(<span class="number">0</span>);<span class="keyword">var</span> startNode=range.startContainer;<span class="keyword">if</span>(startNode.nodeType===<span class="built_in">document</span>.TEXT_NODE)&#123;startNode=startNode.parentNode&#125;bcr=range.getBoundingClientRect();<span class="keyword">return</span>&#123;<span class="attr">x</span>:bcr.left,<span class="attr">y</span>:bcr.top,<span class="attr">color</span>:getColor(startNode)&#125;&#125;<span class="keyword">return</span>&#123;<span class="attr">x</span>:<span class="number">0</span>,<span class="attr">y</span>:<span class="number">0</span>,<span class="attr">color</span>:<span class="string">'transparent'</span>&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">createParticle</span>(<span class="params">x,y,color</span>)</span>&#123;<span class="keyword">return</span>&#123;<span class="attr">x</span>:x,<span class="attr">y</span>:y,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:color,<span class="attr">velocity</span>:&#123;<span class="attr">x</span>:<span class="number">-1</span>+<span class="built_in">Math</span>.random()*<span class="number">2</span>,<span class="attr">y</span>:<span class="number">-3.5</span>+<span class="built_in">Math</span>.random()*<span class="number">2</span>&#125;&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">POWERMODE</span>(<span class="params"></span>)</span>&#123;&#123;<span class="keyword">var</span> caret=getCaret();<span class="keyword">var</span> numParticles=<span class="number">5</span>+<span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*<span class="number">10</span>);<span class="keyword">while</span>(numParticles--)&#123;particles[particlePointer]=createParticle(caret.x,caret.y,caret.color);particlePointer=(particlePointer+<span class="number">1</span>)%<span class="number">500</span>&#125;&#125;&#123;<span class="keyword">if</span>(POWERMODE.shake)&#123;<span class="keyword">var</span> intensity=<span class="number">1</span>+<span class="number">2</span>*<span class="built_in">Math</span>.random();<span class="keyword">var</span> x=intensity*(<span class="built_in">Math</span>.random()&gt;<span class="number">0.5</span>?<span class="number">-1</span>:<span class="number">1</span>);<span class="keyword">var</span> y=intensity*(<span class="built_in">Math</span>.random()&gt;<span class="number">0.5</span>?<span class="number">-1</span>:<span class="number">1</span>);<span class="built_in">document</span>.body.style.marginLeft=x+<span class="string">'px'</span>;<span class="built_in">document</span>.body.style.marginTop=y+<span class="string">'px'</span>;setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">document</span>.body.style.marginLeft=<span class="string">''</span>;<span class="built_in">document</span>.body.style.marginTop=<span class="string">''</span>&#125;,<span class="number">75</span>)&#125;&#125;&#125;;POWERMODE.colorful=<span class="literal">false</span>;<span class="function"><span class="keyword">function</span> <span class="title">loop</span>(<span class="params"></span>)</span>&#123;requestAnimationFrame(loop);context.clearRect(<span class="number">0</span>,<span class="number">0</span>,canvas.width,canvas.height);<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;particles.length;++i)&#123;<span class="keyword">var</span> particle=particles[i];<span class="keyword">if</span>(particle.alpha&lt;=<span class="number">0.1</span>)<span class="keyword">continue</span>;particle.velocity.y+=<span class="number">0.075</span>;particle.x+=particle.velocity.x;particle.y+=particle.velocity.y;particle.alpha*=<span class="number">0.96</span>;context.globalAlpha=particle.alpha;context.fillStyle=particle.color;context.fillRect(<span class="built_in">Math</span>.round(particle.x<span class="number">-1.5</span>),<span class="built_in">Math</span>.round(particle.y<span class="number">-1.5</span>),<span class="number">3</span>,<span class="number">3</span>)&#125;&#125;requestAnimationFrame(loop);<span class="built_in">module</span>.exports=POWERMODE&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">module,exports</span>)</span>&#123;(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> properties=[<span class="string">'direction'</span>,<span class="string">'boxSizing'</span>,<span class="string">'width'</span>,<span class="string">'height'</span>,<span class="string">'overflowX'</span>,<span class="string">'overflowY'</span>,<span class="string">'borderTopWidth'</span>,<span class="string">'borderRightWidth'</span>,<span class="string">'borderBottomWidth'</span>,<span class="string">'borderLeftWidth'</span>,<span class="string">'borderStyle'</span>,<span class="string">'paddingTop'</span>,<span class="string">'paddingRight'</span>,<span class="string">'paddingBottom'</span>,<span class="string">'paddingLeft'</span>,<span class="string">'fontStyle'</span>,<span class="string">'fontVariant'</span>,<span class="string">'fontWeight'</span>,<span class="string">'fontStretch'</span>,<span class="string">'fontSize'</span>,<span class="string">'fontSizeAdjust'</span>,<span class="string">'lineHeight'</span>,<span class="string">'fontFamily'</span>,<span class="string">'textAlign'</span>,<span class="string">'textTransform'</span>,<span class="string">'textIndent'</span>,<span class="string">'textDecoration'</span>,<span class="string">'letterSpacing'</span>,<span class="string">'wordSpacing'</span>,<span class="string">'tabSize'</span>,<span class="string">'MozTabSize'</span>];<span class="keyword">var</span> isFirefox=<span class="built_in">window</span>.mozInnerScreenX!=<span class="literal">null</span>;<span class="function"><span class="keyword">function</span> <span class="title">getCaretCoordinates</span>(<span class="params">element,position,options</span>)</span>&#123;<span class="keyword">var</span> debug=options&amp;&amp;options.debug||<span class="literal">false</span>;<span class="keyword">if</span>(debug)&#123;<span class="keyword">var</span> el=<span class="built_in">document</span>.querySelector(<span class="string">'#input-textarea-caret-position-mirror-div'</span>);<span class="keyword">if</span>(el)&#123;el.parentNode.removeChild(el)&#125;&#125;<span class="keyword">var</span> div=<span class="built_in">document</span>.createElement(<span class="string">'div'</span>);div.id=<span class="string">'input-textarea-caret-position-mirror-div'</span>;<span class="built_in">document</span>.body.appendChild(div);<span class="keyword">var</span> style=div.style;<span class="keyword">var</span> computed=<span class="built_in">window</span>.getComputedStyle?getComputedStyle(element):element.currentStyle;style.whiteSpace=<span class="string">'pre-wrap'</span>;<span class="keyword">if</span>(element.nodeName!==<span class="string">'INPUT'</span>)style.wordWrap=<span class="string">'break-word'</span>;style.position=<span class="string">'absolute'</span>;<span class="keyword">if</span>(!debug)style.visibility=<span class="string">'hidden'</span>;properties.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">prop</span>)</span>&#123;style[prop]=computed[prop]&#125;);<span class="keyword">if</span>(isFirefox)&#123;<span class="keyword">if</span>(element.scrollHeight&gt;<span class="built_in">parseInt</span>(computed.height))style.overflowY=<span class="string">'scroll'</span>&#125;<span class="keyword">else</span>&#123;style.overflow=<span class="string">'hidden'</span>&#125;div.textContent=element.value.substring(<span class="number">0</span>,position);<span class="keyword">if</span>(element.nodeName===<span class="string">'INPUT'</span>)div.textContent=div.textContent.replace(<span class="regexp">/\s/g</span>,<span class="string">"\u00a0"</span>);<span class="keyword">var</span> span=<span class="built_in">document</span>.createElement(<span class="string">'span'</span>);span.textContent=element.value.substring(position)||<span class="string">'.'</span>;div.appendChild(span);<span class="keyword">var</span> coordinates=&#123;<span class="attr">top</span>:span.offsetTop+<span class="built_in">parseInt</span>(computed[<span class="string">'borderTopWidth'</span>]),<span class="attr">left</span>:span.offsetLeft+<span class="built_in">parseInt</span>(computed[<span class="string">'borderLeftWidth'</span>])&#125;;<span class="keyword">if</span>(debug)&#123;span.style.backgroundColor=<span class="string">'#aaa'</span>&#125;<span class="keyword">else</span>&#123;<span class="built_in">document</span>.body.removeChild(div)&#125;<span class="keyword">return</span> coordinates&#125;<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">module</span>!=<span class="string">"undefined"</span>&amp;&amp;<span class="keyword">typeof</span> <span class="built_in">module</span>.exports!=<span class="string">"undefined"</span>)&#123;<span class="built_in">module</span>.exports=getCaretCoordinates&#125;<span class="keyword">else</span>&#123;<span class="built_in">window</span>.getCaretCoordinates=getCaretCoordinates&#125;&#125;())&#125;])&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>失败…..</p>
+<h2 id="类知乎卡片链接"><a href="#类知乎卡片链接" class="headerlink" title="类知乎卡片链接"></a>类知乎卡片链接</h2><p>在 /themes/next/source/js/src/ 下新建 linkcard.js ，内容如下：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> LinkCards=<span class="built_in">document</span>.getElementsByClassName(<span class="string">'LinkCard'</span>);</span><br><span class="line">  <span class="keyword">if</span>(LinkCards.length != <span class="number">0</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> LinkCard=LinkCards[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> link=LinkCard.href;</span><br><span class="line">    <span class="keyword">var</span> title=LinkCard.innerText;</span><br><span class="line">    LinkCard.innerHTML=<span class="string">"&lt;style type=text/css&gt;.LinkCard,.LinkCard:hover&#123;text-decoration:none;border:none!important;color:inherit!important&#125;.LinkCard&#123;position:relative;display:block;margin:5px auto;width:330px;box-sizing:border-box;border-radius:12px;max-width:100%;overflow:hidden;color:inherit;text-decoration:none&#125;.ztext&#123;word-break:break-word;line-height:1.6&#125;.LinkCard-backdrop&#123;position:absolute;top:0;left:0;right:0;bottom:0;background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:center&#125;.LinkCard,.LinkCard:hover&#123;text-decoration:none;border:none!important;color:inherit!important&#125;.LinkCard-content&#123;position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:inherit;background-color:rgba(246,246,246,0.88)&#125;.LinkCard-text&#123;overflow:hidden;width:260px;&#125;.LinkCard-title&#123;white-space: nowrap;display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;max-height:calc(16px * 1.25 * 2);font-size:16px;font-weight:500;line-height:1.25;color:#1a1a1a&#125;@media(max-width: 767px)&#123;.LinkCard-title&#123;font-size:13px;&#125;&#125;.LinkCard-meta&#123;display:flex;margin-top:4px;font-size:14px;line-height:20px;color:#999;white-space:nowrap&#125;.LinkCard-imageCell&#123;margin-left:28px;border-radius:30px;width:70px;&#125;.LinkCard-image&#123;display:block;width:60px;height:auto;border-radius:inherit&#125;&lt;/style&gt;&lt;span class=LinkCard-backdrop style=background-image:url(https://zhstatic.zhihu.com/assets/zhihu/editor/zhihu-card-default.svg)&gt;&lt;/span&gt;&lt;span class=LinkCard-content&gt;&lt;span class=LinkCard-text&gt;&lt;span class=LinkCard-title&gt;"</span>+title+<span class="string">"&lt;/span&gt;&lt;span class=LinkCard-meta&gt;&lt;span style=display:inline-flex;align-items:center&gt;&lt;svg class="</span>+<span class="string">"'Zi Zi--InsertLink'"</span>+<span class="string">" fill=currentColor viewBox="</span>+<span class="string">"'0 0 24 24'"</span>+<span class="string">" width=17 height=17&gt;&lt;path d="</span>+<span class="string">"'M6.77 17.23c-.905-.904-.94-2.333-.08-3.193l3.059-3.06-1.192-1.19-3.059 3.058c-1.489 1.489-1.427 3.954.138 5.519s4.03 1.627 5.519.138l3.059-3.059-1.192-1.192-3.059 3.06c-.86.86-2.289.824-3.193-.08zm3.016-8.673l1.192 1.192 3.059-3.06c.86-.86 2.289-.824 3.193.08.905.905.94 2.334.08 3.194l-3.059 3.06 1.192 1.19 3.059-3.058c1.489-1.489 1.427-3.954-.138-5.519s-4.03-1.627-5.519-.138L9.786 8.557zm-1.023 6.68c.33.33.863.343 1.177.029l5.34-5.34c.314-.314.3-.846-.03-1.176-.33-.33-.862-.344-1.176-.03l-5.34 5.34c-.314.314-.3.846.03 1.177z'"</span>+<span class="string">" fill-rule=evenodd&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;"</span>+link+<span class="string">"&lt;/span&gt;&lt;/span&gt;&lt;span class=LinkCard-imageCell&gt;&lt;img class=LinkCard-image alt=图标 src=/images/linkcard.png&gt;&lt;/span&gt;&lt;/span&gt;"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = LinkCards.length - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">      LinkCard=LinkCards[i];</span><br><span class="line">      title=LinkCard.innerText;</span><br><span class="line">      link=LinkCard.href;</span><br><span class="line">      LinkCard.innerHTML=<span class="string">"&lt;span class=LinkCard-backdrop style=background-image:url(https://zhstatic.zhihu.com/assets/zhihu/editor/zhihu-card-default.svg)&gt;&lt;/span&gt;&lt;span class=LinkCard-content&gt;&lt;span class=LinkCard-text&gt;&lt;span class=LinkCard-title&gt;"</span>+title+<span class="string">"&lt;/span&gt;&lt;span class=LinkCard-meta&gt;&lt;span style=display:inline-flex;align-items:center&gt;&lt;svg class="</span>+<span class="string">"'Zi Zi--InsertLink'"</span>+<span class="string">" fill=currentColor viewBox="</span>+<span class="string">"'0 0 24 24'"</span>+<span class="string">" width=17 height=17&gt;&lt;path d="</span>+<span class="string">"'M6.77 17.23c-.905-.904-.94-2.333-.08-3.193l3.059-3.06-1.192-1.19-3.059 3.058c-1.489 1.489-1.427 3.954.138 5.519s4.03 1.627 5.519.138l3.059-3.059-1.192-1.192-3.059 3.06c-.86.86-2.289.824-3.193-.08zm3.016-8.673l1.192 1.192 3.059-3.06c.86-.86 2.289-.824 3.193.08.905.905.94 2.334.08 3.194l-3.059 3.06 1.192 1.19 3.059-3.058c1.489-1.489 1.427-3.954-.138-5.519s-4.03-1.627-5.519-.138L9.786 8.557zm-1.023 6.68c.33.33.863.343 1.177.029l5.34-5.34c.314-.314.3-.846-.03-1.176-.33-.33-.862-.344-1.176-.03l-5.34 5.34c-.314.314-.3.846.03 1.177z'"</span>+<span class="string">" fill-rule=evenodd&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/span&gt;"</span>+link+<span class="string">"&lt;/span&gt;&lt;/span&gt;&lt;span class=LinkCard-imageCell&gt;&lt;img class=LinkCard-image alt=图标 src=/images/linkcard.png&gt;&lt;/span&gt;&lt;/span&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>需要修改 /images/linkcard.png 为你自己的图片。</p>
+<p>在 /themes/next/layout/_layout.swig 中 body 结束标签前，引入刚才新建的 js：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/linkcard.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></div>
+<p>使用方式：</p>
+<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"https://jiahong.cf"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"LinkCard"</span>&gt;我的相册——时光留影&lt;<span class="regexp">/a&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><a href="https://www.liaofuzhan.com/photos/" class="LinkCard" target="_blank" rel="noopener">我的world</a></p>
 
       
     </div>
@@ -678,7 +693,7 @@
   <p><span>本文标题:</span><a href="/2020/01/11/hexo再配置/">hexo再配置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 吴嘉鸿 的个人博客">吴嘉鸿</a></p>
   <p><span>发布时间:</span>2020年01月11日 - 20:01</p>
-  <p><span>最后更新:</span>2020年01月12日 - 21:01</p>
+  <p><span>最后更新:</span>2020年01月12日 - 22:01</p>
   <p><span>原始链接:</span><a href="/2020/01/11/hexo再配置/" title="hexo再配置">http://wujiahong1998.github.io/2020/01/11/hexo再配置/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://wujiahong1998.github.io/2020/01/11/hexo再配置/" aria-label="复制成功！"></i></span>
   </p>
@@ -746,6 +761,18 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
       
       
 
@@ -990,6 +1017,305 @@
 
           
 
+
+          
+              <!-- canvas粒子时钟 -->
+                  <div style>
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+          
+          
+              <!-- 网站运行时间 -->
+              <div id="days"></div>
+
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("08/07/2019 20:00:00");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+
+          
         </div>
       </section>
 
@@ -1003,7 +1329,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo的一些配置"><span class="nav-number">1.</span> <span class="nav-text">Hexo的一些配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切换主题"><span class="nav-number">1.1.</span> <span class="nav-text">切换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文章"><span class="nav-number">1.2.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现fork-me-on-github"><span class="nav-number">1.3.</span> <span class="nav-text">实现fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章末尾添加“文章结束”标记"><span class="nav-number">1.4.</span> <span class="nav-text">文章末尾添加“文章结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章显示一部分"><span class="nav-number">1.5.</span> <span class="nav-text">文章显示一部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">1.6.</span> <span class="nav-text">修改代码块自定义样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#events-js代码："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">events.js代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#codeblock-js代码："><span class="nav-number">1.6.0.2.</span> <span class="nav-text">codeblock.js代码：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入css"><span class="nav-number">1.6.1.</span> <span class="nav-text">引入css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置引用"><span class="nav-number">1.6.2.</span> <span class="nav-text">配置引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块复制功能"><span class="nav-number">1.7.</span> <span class="nav-text">代码块复制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">1.8.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加热度"><span class="nav-number">1.9.</span> <span class="nav-text">添加热度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问量"><span class="nav-number">1.10.</span> <span class="nav-text">访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">1.11.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置网站的图标Favicon"><span class="nav-number">1.12.</span> <span class="nav-text">设置网站的图标Favicon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现文章统计功能"><span class="nav-number">1.13.</span> <span class="nav-text">实现文章统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加来必力云跟帖功能"><span class="nav-number">1.14.</span> <span class="nav-text">添加来必力云跟帖功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加jiathis分享"><span class="nav-number">1.15.</span> <span class="nav-text">添加jiathis分享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页标题崩溃特效"><span class="nav-number">1.16.</span> <span class="nav-text">网页标题崩溃特效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成Gitalk评论"><span class="nav-number">1.17.</span> <span class="nav-text">集成Gitalk评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义友链页面"><span class="nav-number">1.18.</span> <span class="nav-text">自定义友链页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新增-links-页面"><span class="nav-number">1.18.0.1.</span> <span class="nav-text">新增 links 页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-menu"><span class="nav-number">1.18.0.2.</span> <span class="nav-text">配置 menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新增-links-swig-页"><span class="nav-number">1.18.0.3.</span> <span class="nav-text">新增 links.swig 页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-page-swig"><span class="nav-number">1.18.0.4.</span> <span class="nav-text">修改 page.swig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入-links-swig"><span class="nav-number">1.18.0.5.</span> <span class="nav-text">引入 links.swig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置友链"><span class="nav-number">1.18.0.6.</span> <span class="nav-text">配置友链</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Valine-独立博客评论系统"><span class="nav-number">1.19.</span> <span class="nav-text">Valine: 独立博客评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-获取-APP-ID-和-APP-KEY"><span class="nav-number">1.19.0.1.</span> <span class="nav-text">1. 获取 APP ID 和 APP KEY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-修改主题模板"><span class="nav-number">1.19.0.2.</span> <span class="nav-text">2. 修改主题模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩色标签页"><span class="nav-number">1.20.</span> <span class="nav-text">彩色标签页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归档页美化"><span class="nav-number">1.21.</span> <span class="nav-text">归档页美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章推荐"><span class="nav-number">1.22.</span> <span class="nav-text">文章推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shareJS分享"><span class="nav-number">1.23.</span> <span class="nav-text">shareJS分享</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo的一些配置"><span class="nav-number">1.</span> <span class="nav-text">Hexo的一些配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#切换主题"><span class="nav-number">1.1.</span> <span class="nav-text">切换主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文章"><span class="nav-number">1.2.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现fork-me-on-github"><span class="nav-number">1.3.</span> <span class="nav-text">实现fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章末尾添加“文章结束”标记"><span class="nav-number">1.4.</span> <span class="nav-text">文章末尾添加“文章结束”标记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章显示一部分"><span class="nav-number">1.5.</span> <span class="nav-text">文章显示一部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改代码块自定义样式"><span class="nav-number">1.6.</span> <span class="nav-text">修改代码块自定义样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#events-js代码："><span class="nav-number">1.6.0.1.</span> <span class="nav-text">events.js代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#codeblock-js代码："><span class="nav-number">1.6.0.2.</span> <span class="nav-text">codeblock.js代码：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入css"><span class="nav-number">1.6.1.</span> <span class="nav-text">引入css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置引用"><span class="nav-number">1.6.2.</span> <span class="nav-text">配置引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块复制功能"><span class="nav-number">1.7.</span> <span class="nav-text">代码块复制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#侧边栏社交小图标设置"><span class="nav-number">1.8.</span> <span class="nav-text">侧边栏社交小图标设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加热度"><span class="nav-number">1.9.</span> <span class="nav-text">添加热度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问量"><span class="nav-number">1.10.</span> <span class="nav-text">访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">1.11.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置网站的图标Favicon"><span class="nav-number">1.12.</span> <span class="nav-text">设置网站的图标Favicon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现文章统计功能"><span class="nav-number">1.13.</span> <span class="nav-text">实现文章统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加来必力云跟帖功能"><span class="nav-number">1.14.</span> <span class="nav-text">添加来必力云跟帖功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加jiathis分享"><span class="nav-number">1.15.</span> <span class="nav-text">添加jiathis分享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页标题崩溃特效"><span class="nav-number">1.16.</span> <span class="nav-text">网页标题崩溃特效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成Gitalk评论"><span class="nav-number">1.17.</span> <span class="nav-text">集成Gitalk评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义友链页面"><span class="nav-number">1.18.</span> <span class="nav-text">自定义友链页面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新增-links-页面"><span class="nav-number">1.18.0.1.</span> <span class="nav-text">新增 links 页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-menu"><span class="nav-number">1.18.0.2.</span> <span class="nav-text">配置 menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新增-links-swig-页"><span class="nav-number">1.18.0.3.</span> <span class="nav-text">新增 links.swig 页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-page-swig"><span class="nav-number">1.18.0.4.</span> <span class="nav-text">修改 page.swig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入-links-swig"><span class="nav-number">1.18.0.5.</span> <span class="nav-text">引入 links.swig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置友链"><span class="nav-number">1.18.0.6.</span> <span class="nav-text">配置友链</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Valine-独立博客评论系统"><span class="nav-number">1.19.</span> <span class="nav-text">Valine: 独立博客评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-获取-APP-ID-和-APP-KEY"><span class="nav-number">1.19.0.1.</span> <span class="nav-text">1. 获取 APP ID 和 APP KEY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-修改主题模板"><span class="nav-number">1.19.0.2.</span> <span class="nav-text">2. 修改主题模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩色标签页"><span class="nav-number">1.20.</span> <span class="nav-text">彩色标签页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归档页美化"><span class="nav-number">1.21.</span> <span class="nav-text">归档页美化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章推荐"><span class="nav-number">1.22.</span> <span class="nav-text">文章推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shareJS分享"><span class="nav-number">1.23.</span> <span class="nav-text">shareJS分享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标样式设置"><span class="nav-number">1.24.</span> <span class="nav-text">鼠标样式设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打字特效-（评论、留言）"><span class="nav-number">1.25.</span> <span class="nav-text">打字特效 （评论、留言）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类知乎卡片链接"><span class="nav-number">1.26.</span> <span class="nav-text">类知乎卡片链接</span></a></li></div>
             
 
           </div>
@@ -1049,7 +1375,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.1k字</span>
+  <span class="post-count">博客全站共14k字</span>
 </div>
         
 
@@ -1237,7 +1563,8 @@
         el: '#comments' ,
         appId: 'H6qFmM5oh7cl8CiHHUdexKnz-gzGzoHsz',
         appKey: 'LNg1dVRYx2AuR4bd0ay4S8x5',
-        
+        emoticon_url: 'https://cloud.panjunwen.com/alu',
+        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
         placeholder: '&#x270d;写评论',
   });
 
@@ -1601,6 +1928,23 @@
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 22767,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 
@@ -1616,7 +1960,16 @@
   <script type="text/javascript" src="/js/src/clipboard.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
   
+  <!--share.js-->
+  <link rel="stylesheet" href="/sharejs/css/share.min.css">
+  <script src="/sharejs/js/social-share.min.js"></script>
+
+  
+
   <!--崩溃欺骗-->
   <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
+  
+  <script type="text/javascript" src="/js/src/linkcard.js"></script>
+  
 </body>
 </html>
