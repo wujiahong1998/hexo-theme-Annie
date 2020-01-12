@@ -1521,6 +1521,15 @@ show_date_time();
 
   
 
+  
+<script type="text/javascript">
+    //微信二维码点击背景关闭
+    $('body').delegate('.-mob-share-weixin-qrcode-bg','click', function(){
+         $(".-mob-share-weixin-qrcode-close").trigger("click");
+    }); 
+</script>
+
+
 
   <!-- 页面点击小红心 -->
   <script type="text/javascript" src="/js/src/love.js"></script>
@@ -1532,6 +1541,7 @@ show_date_time();
   <!--share.js-->
   <link rel="stylesheet" href="/sharejs/css/share.min.css">
   <script src="/sharejs/js/social-share.min.js"></script>
+
 
   
 
