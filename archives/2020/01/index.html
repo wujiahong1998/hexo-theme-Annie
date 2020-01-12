@@ -176,6 +176,10 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
+  <!--share.js-->
+  <link rel="stylesheet" href="/dist/css/share.min.css">
+  <script src="/dist/js/social-share.min.js"></script>
+  
   
   
     
@@ -370,12 +374,18 @@
 
         
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="my-post-header">
 
-      <h3 class="post-title">
+      <div class="my-post-meta">
+        <time class="my-post-time" itemprop="dateCreated" datetime="2020-01-11T22:09:07+08:00" content="2020-01-11">
+          01-11
+        </time>
+      </div>
+
+      <h3 class="my-post-title">
         
-            <a class="post-title-link" href="/2020/01/11/test/" itemprop="url">
+            <a class="my-post-title-link" href="/2020/01/11/test/" itemprop="url">
               
                 <span itemprop="name">test</span>
               
@@ -383,12 +393,6 @@
         
       </h3>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-01-11T22:09:07+08:00" content="2020-01-11">
-          01-11
-        </time>
-      </div>
-
     </header>
   </article>
 
@@ -405,12 +409,18 @@
 
         
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="my-post-header">
 
-      <h3 class="post-title">
+      <div class="my-post-meta">
+        <time class="my-post-time" itemprop="dateCreated" datetime="2020-01-11T20:55:42+08:00" content="2020-01-11">
+          01-11
+        </time>
+      </div>
+
+      <h3 class="my-post-title">
         
-            <a class="post-title-link" href="/2020/01/11/hexo再配置/" itemprop="url">
+            <a class="my-post-title-link" href="/2020/01/11/hexo再配置/" itemprop="url">
               
                 <span itemprop="name">hexo再配置</span>
               
@@ -418,12 +428,6 @@
         
       </h3>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-01-11T20:55:42+08:00" content="2020-01-11">
-          01-11
-        </time>
-      </div>
-
     </header>
   </article>
 
@@ -440,24 +444,24 @@
 
         
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="my-post-header">
 
-      <h3 class="post-title">
+      <div class="my-post-meta">
+        <time class="my-post-time" itemprop="dateCreated" datetime="2020-01-11T11:36:40+08:00" content="2020-01-11">
+          01-11
+        </time>
+      </div>
+
+      <h3 class="my-post-title">
         
-            <a class="post-title-link" href="/2020/01/11/hello/" itemprop="url">
+            <a class="my-post-title-link" href="/2020/01/11/hello/" itemprop="url">
               
                 <span itemprop="name">hello</span>
               
             </a>
         
       </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-01-11T11:36:40+08:00" content="2020-01-11">
-          01-11
-        </time>
-      </div>
 
     </header>
   </article>
@@ -694,7 +698,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10k字</span>
+  <span class="post-count">博客全站共12.1k字</span>
 </div>
         
 
@@ -866,12 +870,22 @@
         el: '#comments' ,
         appId: 'H6qFmM5oh7cl8CiHHUdexKnz-gzGzoHsz',
         appKey: 'LNg1dVRYx2AuR4bd0ay4S8x5',
-        emoticon_url: 'https://cloud.panjunwen.com/alu',
-        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
-        placeholder: '评论一下',
+        
+        placeholder: '&#x270d;写评论',
   });
 
+  <!--点击邮件中的链接跳转至相应评论-->
+  if(window.location.hash){
+      var checkExist = setInterval(function() {
+         if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+         }
+      }, 100);
+   }
+
   </script>
+
 
 
   

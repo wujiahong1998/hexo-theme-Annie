@@ -174,6 +174,10 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
+  <!--share.js-->
+  <link rel="stylesheet" href="/dist/css/share.min.css">
+  <script src="/dist/js/social-share.min.js"></script>
+  
   
   
     
@@ -360,9 +364,46 @@
                 9 tags in total
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/学习/" style="font-size: 12px; color: #ccc">-学习</a> <a href="/tags/C/" style="font-size: 21px; color: #6f6f6f">C++</a> <a href="/tags/HEXO/" style="font-size: 12px; color: #ccc">HEXO</a> <a href="/tags/Life/" style="font-size: 12px; color: #ccc">Life</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/life/" style="font-size: 21px; color: #6f6f6f">life</a> <a href="/tags/test/" style="font-size: 12px; color: #ccc">test</a> <a href="/tags/学习/" style="font-size: 30px; color: #111">学习</a>
+              <a href="/tags/学习/" style="font-size: 12px; color: #ccc">-学习</a> <a href="/tags/C/" style="font-size: 18px; color: #6f6f6f">C++</a> <a href="/tags/HEXO/" style="font-size: 12px; color: #ccc">HEXO</a> <a href="/tags/Life/" style="font-size: 12px; color: #ccc">Life</a> <a href="/tags/Linux/" style="font-size: 12px; color: #ccc">Linux</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/life/" style="font-size: 18px; color: #6f6f6f">life</a> <a href="/tags/test/" style="font-size: 12px; color: #ccc">test</a> <a href="/tags/学习/" style="font-size: 24px; color: #111">学习</a>
             </div>
           </div>
+
+          <script type="text/javascript">
+     var alltags = document.getElementsByClassName('tag-cloud-tags');
+     var tags = alltags[0].getElementsByTagName('a');
+     for (var i = tags.length - 1; i >= 0; i--) {
+       var r=Math.floor(Math.random()*75+130);
+       var g=Math.floor(Math.random()*75+100);
+       var b=Math.floor(Math.random()*75+80);
+       tags[i].style.background = "rgb("+r+","+g+","+b+")";
+     }
+</script>
+
+<style>
+  .tag-cloud-tags{
+    /*font-family: Helvetica, Tahoma, Arial;*/
+    /*font-weight: 100;*/
+    text-align: center;
+    counter-reset: tags;
+  }
+  .tag-cloud-tags a{
+    border-radius: 6px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 8px 5px 0px 0px;
+  }
+  .tag-cloud-tags a:before{
+    content: "🔖";
+  }
+
+  .tag-cloud-tags a:hover{
+     box-shadow: 0px 5px 15px 0px rgba(0,0,0,.4);
+     transform: scale(1.1);
+     /*box-shadow: 10px 10px 15px 2px rgba(0,0,0,.12), 0 0 6px 0 rgba(104, 104, 105, 0.1);*/
+     transition-duration: 0.15s;
+  }
+</style>
+
         
       </div>
       
@@ -593,7 +634,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10k字</span>
+  <span class="post-count">博客全站共12.1k字</span>
 </div>
         
 
@@ -769,12 +810,22 @@
         el: '#comments' ,
         appId: 'H6qFmM5oh7cl8CiHHUdexKnz-gzGzoHsz',
         appKey: 'LNg1dVRYx2AuR4bd0ay4S8x5',
-        emoticon_url: 'https://cloud.panjunwen.com/alu',
-        emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
-        placeholder: '评论一下',
+        
+        placeholder: '&#x270d;写评论',
   });
 
+  <!--点击邮件中的链接跳转至相应评论-->
+  if(window.location.hash){
+      var checkExist = setInterval(function() {
+         if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+         }
+      }, 100);
+   }
+
   </script>
+
 
 
   
